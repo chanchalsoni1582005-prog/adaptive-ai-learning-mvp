@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.adaptive_engine import AdaptiveEngine
 
 app = FastAPI()
