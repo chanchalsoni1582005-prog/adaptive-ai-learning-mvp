@@ -14,15 +14,17 @@ class AdaptiveEngine:
         return random.choice(qs) if qs else random.choice(self.questions)
 
     def submit_answer(self, qid, option):
-        q = next(q for q in self.questions if q["id"] == qid)
-        correct = (option == q["answer"])
-        if correct:
-            self.level = min(5, self.level + 1)
-        else:
-            self.level = max(1, self.level - 1)
-        self.skills[q["skill"]].append(1 if correct else 0)
-        self.history.append({"qid": qid, "correct": correct})
-        return correct
+    q = next(q for q in self.questions if q["id"] == qid)
+    option_index = option - 1
+    correct = (option_index == q["answer"])
+    if correct:
+        self.level = min(5, self.level + 1)
+    else:
+        self.level = max(1, self.level - 1)
+    self.skills[q["skill"]].append(1 if correct else 0)
+    self.history.append({"qid": qid, "correct": correct})
+    return correct
+
 
     def report(self):
         report = {}
