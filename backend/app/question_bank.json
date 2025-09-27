@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "question": "A car travels 60 km in 2 hours. What is its speed?",
+    "options": ["20 km/h", "30 km/h", "40 km/h", "60 km/h"],
+    "answer": 1,
+    "difficulty": 1,
+    "skill": "listening"
+  },
+  {
+    "id": 2,
+    "question": "A train 100m long crosses a pole in 10 seconds. What is its speed?",
+    "options": ["5 m/s", "10 m/s", "15 m/s", "20 m/s"],
+    "answer": 1,
+    "difficulty": 2,
+    "skill": "grasping"
+  },
+  {
+    "id": 3,
+    "question": "A man walks at 5 km/h. How much time will he take to cover 15 km?",
+    "options": ["2 hr", "3 hr", "4 hr", "5 hr"],
+    "answer": 1,
+    "difficulty": 2,
+    "skill": "application"
+  }
+]
